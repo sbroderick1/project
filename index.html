@@ -7,19 +7,52 @@
     <style>
         h1 {
             text-align: center;
+            font-size: 30pt;
             font-family: Bradley hand, cursive;
             color: palevioletred;
         }
         body {
-            background-color: lightgray;
+            background-color: whitesmoke;
         }
         div {
             text-align: center;
         }
+        .nav {
+            overflow: hidden;
+            background-color: white;
+            border:black;
+            border-top: lightgray;
+            border-bottom: black;
+            border-radius: 1pt;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .nav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 5px 70px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .nav a.active {
+            color:palevioletred;
+        }
     </style>
 </head>
 <body>
-    <h1>Get Your Fashion Fix with Scarlet</h1>
+    <p>
+        <span style="float: left;"><a href="index.html"><img class="logo" src="images/Logo.png" alt="logo" title="logo" height="90"></a></span>
+        <h1>Get Your Fashion Fix with Scarlet</h1>
+    </p>
+    <br>
     <hr>
     <div class="nav">
         <a class="active" href="#home">Home</a>
@@ -42,10 +75,16 @@
           <button>Feedback</button>
           <!--link to feedback/contact form-->
       </div>
-      <p><a href="contact.html">Contact</a></p>
-      <p><a href="sitemap.html">Sitemap</a></p>
-      <p><a href="#top">
-          <img src="images/arrow.webp" alt="arrow" title="arrow" height="50">
-      </a></p>
+      <p>
+        <a href="#top">
+            <img src="images/arrow.webp" alt="arrow" title="Return to Top" height="50">
+        </a>
+        <a href="contact.html">
+          <img src="images/chat.jpg" alt="chat" title="Contact Me" height="50">
+        </a>
+        <a href="sitemap.html">
+          <img src="images/home.jpg" alt="home" title="Sitemap" height="50">
+        </a>
+      </p>
 </body>
 </html>
