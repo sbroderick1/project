@@ -4,9 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 30pt;
+            font-family: Bradley hand, cursive;
+            color: palevioletred;
+        }
+        body {
+            background-color: whitesmoke;
+        }
+        div {
+            text-align: center;
+        }
+        .nav {
+            overflow: hidden;
+            background-color: white;
+            border:black;
+            border-top: lightgray;
+            border-bottom: black;
+            border-radius: 1pt;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .nav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 5px 70px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .nav a.active {
+            color:palevioletred;
+        }
+    </style>
 </head>
 <body>
-    
+    <<p>
+        <!--<span style="float: left;"><a href="index.html"><img class="logo" src="images/Logo.png" alt="logo" title="logo" height="90"></a></span>-->
+        <h1>Get Your Fashion Fix with Scarlet</h1>
+    </p>
+    <br>
+    <hr>
+    <div class="nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="trends.html">Current Trends</a>
+        <a href="influencers.html">Top Influencers</a>
+        <a href="current-events.html">Current Events in Fashion</a>
+        <a href="runway-vs-rtw.html">Runway vs RTW</a>
+        <a href="aboutme.html">About Me</a>
+      </div>
+      <hr>
+      <img src="images/tiger1.jpg" alt="tiger1" />
+      <p id="description"></p>
     <!--add slideshow of images-->
+
+    <script>
+        const slides = [
+            "images/tiger1.jpg", 
+            "images/tiger2.jpg", 
+            "images/tiger3.jpg", 
+            "images/tiger4.jpg",
+        ];
+  
+        const colors = ["red", "yellow", "blue", "green"];
+        const textArray = ["Tiger Walking", "Tiger Looking At You", "Tiger Looking To Left", "Two Tigers"];
+  
+        let i = 0;
+  
+        const image = document.querySelector('img');
+        const description = document.getElementById("description");
+  
+        function slideShow() {
+            if (i === slides.length) {
+                i = 0
+            }
+            image.src = slides[i];
+            image.style.borderColor = colors[i];
+            description.innerText = textArray[i];
+  
+            console.log(i);
+            i = i + 1;
+  
+            setTimeout(slideShow, 1000);
+        }  
+        document.querySelector('body').onload = slideShow;
+       
+      </script>
 </body>
 </html>
