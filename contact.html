@@ -83,9 +83,9 @@
     <h2>Customer Feedback</h2>
 <fieldset>
     <legend id="info">Your Information</legend>
-    <form  method="post" action="/process">
+    <form  method="post" action="/action_page.php">
         <label for="Name">Name:</label>
-        <input type="text" id="Name" name="Name" maxlength="100" placeholder="Enter your name here" />
+        <input type="text" id="Name" name="Name" required maxlength="100" placeholder="Enter your name here" />
        <br>
        <br>
        <label for="Email">Email:</label>
@@ -118,6 +118,17 @@
     <button type="submit">Submit</button>
     <button type="reset">Reset</button>
 </fieldset>
+<fieldset>
+    <form>
+        <p>Please give my website a rating between 1 and 10:</p>
+
+        <input id="rating">
+        
+        <button type="button" onclick="validateForm()">Submit</button>
+        
+        <p id="demo"></p> 
+    </form>
+</fieldset>
 <p>
   <a href="#top">
         <img src="images/arrow.webp" alt="arrow" title="Return to Top" height="50">
@@ -125,5 +136,19 @@
     <img src="images/home.jpg" alt="home" title="Sitemap" height="50">
   </a>
 </p>
+<script>
+   function validateForm() {
+    let x, text;
+    x = document.getElementById("rating").value;
+
+    if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+    } else {
+        text = "Thank you for your feedback!";
+    }
+    document.getElementById("demo").innerHTML = text;
+    }
+     
+</script>
 </body>
 </html>

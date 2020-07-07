@@ -70,9 +70,9 @@
           <p>Scarlet Broderick</p>
           <p>sbroderick1@babson.edu</p>
           <p>203-558-9011</p>
-          <button>Contact Me</button> 
+          <button><a href="mailto:sbroderick1@babson.edu">Contact Me</a></button> 
           <!--email link-->
-          <button>Feedback</button>
+          <button><a href="contact.html">Feedback</a></button>
           <!--link to feedback/contact form-->
       </div>
       <p>
@@ -86,5 +86,18 @@
           <img src="images/home.jpg" alt="home" title="Sitemap" height="50">
         </a>
       </p>
+
+      <script>
+        function changeBackgroundColor() {
+        const bgColors = ["lightblue", "lightyellow", "lightgreen", "lightpink", "grey", "white"];
+        let n = bgColors.length;
+        let randIndex = Math.floor(Math.random() * n);
+        // const b = document.getElementById("bodyA");
+        const b = document.querySelector("body");
+        b.style.backgroundColor = bgColors[randIndex];
+      }
+
+      document.querySelector("h1").onclick = changeBackgroundColor;
+      </script>
 </body>
 </html>

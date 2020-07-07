@@ -156,5 +156,17 @@
           <img class="info" src="images/home.jpg" alt="home" title="Sitemap" height="50">
         </a>
       </p>
+
+      <script>
+        function changeHeader() {
+            x = document.querySelector("h2");
+            if (x.innerHTML === "Summer 2020 Trends") {
+                 x.innerHTML = "Check Back Each Month For New Trends!";
+            } else {
+                x.innerHTML = "Summer 2020 Trends";
+            }
+        }
+      document.querySelector("h2").onclick = changeHeader;
+      </script>
 </body>
 </html>
